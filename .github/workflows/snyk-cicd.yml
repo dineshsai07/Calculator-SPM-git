@@ -29,6 +29,9 @@ jobs:
         env:
           SNYK_TOKEN: 7269f8ab-3353-40d3-b262-03b551bc9e0b
         run: snyk auth $SNYK_TOKEN
+        
+      - name: change directory
+        run: cd /SourcePackages
 
       - name: Run Snyk command
         run: snyk test --all-projects

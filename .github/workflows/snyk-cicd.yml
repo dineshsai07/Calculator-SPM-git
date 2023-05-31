@@ -13,8 +13,7 @@ jobs:
       - name: Install Xcode 14.2
         run: |
       - name: Select Xcode version
-        run: xcode-select -s '/Applications/Xcode_12.1.app/Contents/Developer'
-             mv Xcode.app /Applications/Xcode.app
+        run: xcode-select -s '/Applications/Xcode_12.1.app/Contents/Developer' && mv Xcode.app /Applications/Xcode.app
       - name: Clone repository
         uses: actions/checkout@v2
 

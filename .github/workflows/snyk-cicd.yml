@@ -18,6 +18,9 @@ jobs:
 
       - name: Resolve Package Dependencies
         run: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
+        
+      - name: show the list of files 
+        run: ls
 
       - name: Install Snyk
         run: npm install -g snyk

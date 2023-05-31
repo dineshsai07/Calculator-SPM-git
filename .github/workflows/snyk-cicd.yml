@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Install Xcode 14.2
         run: |
-          curl -OL "https://download.developer.apple.com/Developer_Tools/Xcode_14.2/Xcode_14.2.xip"
-          unzip -q Xcode_14.2.xip
-          sudo mv Xcode.app /Applications/Xcode.app
+      - name: Select Xcode version
+        run: sudo xcode-select -s '/Applications/Xcode_12.1.app/Contents/Developer'
+             sudo mv Xcode.app /Applications/Xcode.app
       - name: Clone repository
         uses: actions/checkout@v2
 
